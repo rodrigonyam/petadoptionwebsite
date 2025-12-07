@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Pets - XYZ Pet Adoption</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav role="navigation" aria-label="Main navigation">
+            <div class="nav-container">
+                <div class="logo">
+                    <h1><a href="index.html">XYZ Pet Adoption</a></h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="pets.html" class="active">Pets</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="cats.html">Cats</a></li>
+                            <li><a href="dogs.html">Dogs</a></li>
+                            <li><a href="pets.html">All Pets</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="activities.html">Activities</a></li>
+                    <li class="dropdown">
+                        <a href="auth.html">Account</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="login.html">Login</a></li>
+                            <li><a href="register.html">Register</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <h1>🐾 Find Your Perfect Companion</h1>
+            <p>Browse all our amazing pets looking for their forever homes!</p>
+        </section>
+
+        <section class="pet-filters">
+            <h2>Filter Pets</h2>
+            <div class="filter-container">
+                <div class="filter-group">
+                    <label for="pet-type">Pet Type:</label>
+                    <select id="pet-type" name="pet-type">
+                        <option value="all">All Pets</option>
+                        <option value="cats">Cats</option>
+                        <option value="dogs">Dogs</option>
+                        <option value="rabbits">Rabbits</option>
+                        <option value="birds">Birds</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label for="age-range">Age Range:</label>
+                    <select id="age-range" name="age-range">
+                        <option value="all">All Ages</option>
+                        <option value="young">Young (0-2 years)</option>
+                        <option value="adult">Adult (3-7 years)</option>
+                        <option value="senior">Senior (8+ years)</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label for="size">Size:</label>
+                    <select id="size" name="size">
+                        <option value="all">All Sizes</option>
+                        <option value="small">Small (under 25 lbs)</option>
+                        <option value="medium">Medium (25-60 lbs)</option>
+                        <option value="large">Large (over 60 lbs)</option>
+                    </select>
+                </div>
+
+                <button class="btn filter-btn" onclick="applyFilters()">Apply Filters</button>
+                <button class="btn btn-outline" onclick="clearFilters()">Clear All</button>
+            </div>
+        </section>
+
+        <section class="pets-showcase">
+            <div class="showcase-header">
+                <h2>Available Pets</h2>
+                <div class="view-toggle">
+                    <button class="view-btn active" data-view="grid" aria-label="Grid view">⚏</button>
+                    <button class="view-btn" data-view="list" aria-label="List view">☰</button>
+                </div>
+            </div>
+
+            <div class="pets-grid" id="pets-container">
+                <!-- Dogs -->
+                <article class="pet-card" data-type="dogs" data-age="adult" data-size="large">
+                    <img src="https://images.unsplash.com/photo-1552053831-71594a27632d?w=400&h=300&fit=crop" alt="Buddy - Golden Retriever">
+                    <div class="pet-info">
+                        <div class="pet-header">
+                            <h3>Buddy</h3>
+                            <span class="pet-type">🐶 Dog</span>
+                        </div>
+                        <p><strong>Breed:</strong> Golden Retriever</p>
+                        <p><strong>Age:</strong> 3 years</p>
+                        <p><strong>Size:</strong> Large (70 lbs)</p>
+                        <p>Friendly and energetic companion who loves fetch and swimming.</p>
+                        <button class="btn adopt-btn">Learn More</button>
+                    </div>
+                </article>
+
+                <!-- Cats -->
+                <article class="pet-card" data-type="cats" data-age="adult" data-size="small">
+                    <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=400&h=300&fit=crop" alt="Whiskers - Orange Tabby Cat">
+                    <div class="pet-info">
+                        <div class="pet-header">
+                            <h3>Whiskers</h3>
+                            <span class="pet-type">🐱 Cat</span>
+                        </div>
+                        <p><strong>Breed:</strong> Orange Tabby</p>
+                        <p><strong>Age:</strong> 2 years</p>
+                        <p><strong>Size:</strong> Small</p>
+                        <p>Playful and affectionate cat who loves sunny spots and toy mice.</p>
+                        <button class="btn adopt-btn">Learn More</button>
+                    </div>
+                </article>
+
+                <article class="pet-card" data-type="dogs" data-age="young" data-size="small">
+                    <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?w=400&h=300&fit=crop" alt="Daisy - Terrier Mix">
+                    <div class="pet-info">
+                        <div class="pet-header">
+                            <h3>Daisy</h3>
+                            <span class="pet-type">🐶 Dog</span>
+                        </div>
+                        <p><strong>Breed:</strong> Terrier Mix</p>
+                        <p><strong>Age:</strong> 2 years</p>
+                        <p><strong>Size:</strong> Small (15 lbs)</p>
+                        <p>Spunky and intelligent small dog with a big personality!</p>
+                        <button class="btn adopt-btn">Learn More</button>
+                    </div>
+                </article>
+
+                <article class="pet-card" data-type="cats" data-age="adult" data-size="small">
+                    <img src="https://images.unsplash.com/photo-1573865526739-10659fec78a5?w=400&h=300&fit=crop" alt="Luna - Tuxedo Cat">
+                    <div class="pet-info">
+                        <div class="pet-header">
+                            <h3>Luna</h3>
+                            <span class="pet-type">🐱 Cat</span>
+                        </div>
+                        <p><strong>Breed:</strong> Tuxedo Cat</p>
+                        <p><strong>Age:</strong> 3 years</p>
+                        <p><strong>Size:</strong> Small</p>
+                        <p>Calm and gentle lady who enjoys quiet evenings and gentle pets.</p>
+                        <button class="btn adopt-btn">Learn More</button>
+                    </div>
+                </article>
+
+                <!-- Rabbits -->
+                <article class="pet-card" data-type="rabbits" data-age="adult" data-size="small">
+                    <img src="https://images.unsplash.com/photo-1585110396000-c9ffd4e4b308?w=400&h=300&fit=crop" alt="Cocoa - Holland Lop Rabbit">
+                    <div class="pet-info">
+                        <div class="pet-header">
+                            <h3>Cocoa</h3>
+                            <span class="pet-type">🐰 Rabbit</span>
+                        </div>
+                        <p><strong>Breed:</strong> Holland Lop</p>
+                        <p><strong>Age:</strong> 2 years</p>
+                        <p><strong>Size:</strong> Small</p>
+                        <p>Gentle and social rabbit who loves fresh vegetables and hop-around time.</p>
+                        <button class="btn adopt-btn">Learn More</button>
+                    </div>
+                </article>
+
+                <article class="pet-card" data-type="rabbits" data-age="young" data-size="small">
+                    <img src="https://images.unsplash.com/photo-1588267976163-9816c0608195?w=400&h=300&fit=crop" alt="Pepper - Mini Rex Rabbit">
+                    <div class="pet-info">
+                        <div class="pet-header">
+                            <h3>Pepper</h3>
+                            <span class="pet-type">🐰 Rabbit</span>
+                        </div>
+                        <p><strong>Breed:</strong> Mini Rex</p>
+                        <p><strong>Age:</strong> 1 year</p>
+                        <p><strong>Size:</strong> Small</p>
+                        <p>Energetic young rabbit with incredibly soft fur and curious nature.</p>
+                        <button class="btn adopt-btn">Learn More</button>
+                    </div>
+                </article>
+
+                <!-- Birds -->
+                <article class="pet-card" data-type="birds" data-age="adult" data-size="small">
+                    <img src="https://images.unsplash.com/photo-1552728089-57bdde30beb3?w=400&h=300&fit=crop" alt="Sunny - Cockatiel">
+                    <div class="pet-info">
+                        <div class="pet-header">
+                            <h3>Sunny</h3>
+                            <span class="pet-type">🦜 Bird</span>
+                        </div>
+                        <p><strong>Species:</strong> Cockatiel</p>
+                        <p><strong>Age:</strong> 3 years</p>
+                        <p><strong>Size:</strong> Small</p>
+                        <p>Cheerful cockatiel who loves to whistle and sing along to music.</p>
+                        <button class="btn adopt-btn">Learn More</button>
+                    </div>
+                </article>
+
+                <article class="pet-card" data-type="birds" data-age="adult" data-size="small">
+                    <img src="https://images.unsplash.com/photo-1574781330855-d0db2706b3d0?w=400&h=300&fit=crop" alt="Rainbow - Lovebird">
+                    <div class="pet-info">
+                        <div class="pet-header">
+                            <h3>Rainbow</h3>
+                            <span class="pet-type">🦜 Bird</span>
+                        </div>
+                        <p><strong>Species:</strong> Lovebird</p>
+                        <p><strong>Age:</strong> 2 years</p>
+                        <p><strong>Size:</strong> Small</p>
+                        <p>Vibrant and social lovebird looking for a companion and loving home.</p>
+                        <button class="btn adopt-btn">Learn More</button>
+                    </div>
+                </article>
+            </div>
+
+            <div class="load-more-section">
+                <button class="btn btn-outline load-more-btn">Load More Pets</button>
+                <p class="results-info">Showing 8 of 24 available pets</p>
+            </div>
+        </section>
+
+        <section class="adoption-process">
+            <h2>Adoption Process</h2>
+            <div class="process-steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Browse & Choose</h3>
+                    <p>Look through our available pets and find one that matches your lifestyle.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Meet & Greet</h3>
+                    <p>Visit us to spend time with your chosen pet and see if you're a good match.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Apply</h3>
+                    <p>Fill out our adoption application and provide references if required.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Home Check</h3>
+                    <p>Some pets may require a home visit to ensure a safe environment.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">5</div>
+                    <h3>Take Home</h3>
+                    <p>Complete the adoption paperwork and welcome your new family member!</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 XYZ Pet Adoption. All rights reserved. | Helping pets find their forever homes.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

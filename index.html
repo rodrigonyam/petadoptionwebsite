@@ -8,16 +8,35 @@
 </head>
 <body>
     <header>
-        <nav>
+        <nav role="navigation" aria-label="Main navigation">
             <div class="nav-container">
-                <h1>XYZ Pet Adoption</h1>
+                <div class="logo">
+                    <h1><a href="index.html">XYZ Pet Adoption</a></h1>
+                </div>
                 <ul class="nav-menu">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="cats.html">Cats</a></li>
-                    <li><a href="dogs.html">Dogs</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li class="dropdown">
+                        <a href="pets.html">Pets</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="cats.html">Cats</a></li>
+                            <li><a href="dogs.html">Dogs</a></li>
+                            <li><a href="pets.html">All Pets</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="activities.html">Activities</a></li>
+                    <li class="dropdown">
+                        <a href="auth.html">Account</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="login.html">Login</a></li>
+                            <li><a href="register.html">Register</a></li>
+                        </ul>
+                    </li>
                 </ul>
+                <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
         </nav>
     </header>

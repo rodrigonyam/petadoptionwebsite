@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activities & Events - XYZ Pet Adoption</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav role="navigation" aria-label="Main navigation">
+            <div class="nav-container">
+                <div class="logo">
+                    <h1><a href="index.html">XYZ Pet Adoption</a></h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="pets.html">Pets</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="cats.html">Cats</a></li>
+                            <li><a href="dogs.html">Dogs</a></li>
+                            <li><a href="pets.html">All Pets</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="activities.html" class="active">Activities</a></li>
+                    <li class="dropdown">
+                        <a href="auth.html">Account</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="login.html">Login</a></li>
+                            <li><a href="register.html">Register</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <h1>🎾 Activities & Events</h1>
+            <p>Join us for fun activities and events that help socialize pets and connect with other pet lovers!</p>
+        </section>
+
+        <section class="activity-controls">
+            <div class="activity-filters">
+                <button class="filter-btn active" data-activity-filter="all">All Events</button>
+                <button class="filter-btn" data-activity-filter="upcoming">Upcoming</button>
+                <button class="filter-btn" data-activity-filter="adoption-events">Adoption Events</button>
+                <button class="filter-btn" data-activity-filter="volunteer">Volunteer</button>
+                <button class="filter-btn" data-activity-filter="education">Education</button>
+                <button class="filter-btn" data-activity-filter="available">Available Spots</button>
+            </div>
+            <input type="text" id="activity-search" class="activity-search" placeholder="Search activities...">
+        </section>
+
+        <section class="upcoming-events">
+            <h2>Upcoming Events</h2>
+            <div class="events-grid">
+                <article class="event-card">
+                    <div class="event-date">
+                        <span class="month">Dec</span>
+                        <span class="day">14</span>
+                    </div>
+                    <div class="event-info">
+                        <h3>Holiday Pet Adoption Fair</h3>
+                        <p class="event-time">📅 December 14, 2025 • 10:00 AM - 4:00 PM</p>
+                        <p class="event-location">📍 City Park Main Pavilion</p>
+                        <p>Join us for our annual holiday adoption event! Meet dozens of pets looking for forever homes, enjoy hot cocoa, and take photos with Santa and your new furry friend.</p>
+                        <button class="btn">Register Now</button>
+                    </div>
+                </article>
+
+                <article class="event-card">
+                    <div class="event-date">
+                        <span class="month">Dec</span>
+                        <span class="day">21</span>
+                    </div>
+                    <div class="event-info">
+                        <h3>Pet Training Workshop</h3>
+                        <p class="event-time">📅 December 21, 2025 • 2:00 PM - 4:00 PM</p>
+                        <p class="event-location">📍 XYZ Pet Adoption Center</p>
+                        <p>Learn basic training techniques for dogs and cats. Perfect for new pet owners or those looking to improve their pet's behavior. All skill levels welcome!</p>
+                        <button class="btn">Sign Up</button>
+                    </div>
+                </article>
+
+                <article class="event-card">
+                    <div class="event-date">
+                        <span class="month">Jan</span>
+                        <span class="day">04</span>
+                    </div>
+                    <div class="event-info">
+                        <h3>New Year Pet Walk</h3>
+                        <p class="event-time">📅 January 4, 2026 • 9:00 AM - 11:00 AM</p>
+                        <p class="event-location">📍 Riverside Trail</p>
+                        <p>Start the new year with a healthy walk alongside adoptable dogs! Help socialize our shelter dogs while getting some exercise and fresh air.</p>
+                        <button class="btn">Join Walk</button>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="activities-info">
+            <h2>Regular Activities</h2>
+            <div class="activities-grid">
+                <div class="activity-card">
+                    <div class="activity-icon">🐕</div>
+                    <h3>Dog Walking Program</h3>
+                    <p class="schedule">Every Tuesday & Thursday • 3:00 PM - 5:00 PM</p>
+                    <p>Help our shelter dogs get exercise and socialization. No experience required - we'll provide training and match you with the perfect walking buddy!</p>
+                    <ul class="activity-benefits">
+                        <li>Help dogs stay healthy and happy</li>
+                        <li>Learn about different dog breeds</li>
+                        <li>Meet other dog lovers</li>
+                        <li>Flexible volunteer scheduling</li>
+                    </ul>
+                    <button class="btn btn-outline">Learn More</button>
+                </div>
+
+                <div class="activity-card">
+                    <div class="activity-icon">🐱</div>
+                    <h3>Cat Socialization</h3>
+                    <p class="schedule">Every Monday, Wednesday & Friday • 11:00 AM - 1:00 PM</p>
+                    <p>Spend quality time with our cats to help them become more comfortable around people. Perfect for cat enthusiasts of all ages!</p>
+                    <ul class="activity-benefits">
+                        <li>Help shy cats gain confidence</li>
+                        <li>Learn cat behavior and care</li>
+                        <li>Therapeutic and relaxing activity</li>
+                        <li>Small group sessions</li>
+                    </ul>
+                    <button class="btn btn-outline">Get Involved</button>
+                </div>
+
+                <div class="activity-card">
+                    <div class="activity-icon">🎓</div>
+                    <h3>Pet Care Classes</h3>
+                    <p class="schedule">First Saturday of each month • 1:00 PM - 3:00 PM</p>
+                    <p>Monthly educational sessions covering topics like nutrition, grooming, first aid, and behavior training for both cats and dogs.</p>
+                    <ul class="activity-benefits">
+                        <li>Expert veterinarian speakers</li>
+                        <li>Hands-on demonstrations</li>
+                        <li>Q&A sessions</li>
+                        <li>Take-home resources</li>
+                    </ul>
+                    <button class="btn btn-outline">Register</button>
+                </div>
+
+                <div class="activity-card">
+                    <div class="activity-icon">📸</div>
+                    <h3>Pet Photography Sessions</h3>
+                    <p class="schedule">Every Sunday • 10:00 AM - 12:00 PM</p>
+                    <p>Help create beautiful adoption photos for our pets! Learn photography tips while helping pets find their forever homes faster.</p>
+                    <ul class="activity-benefits">
+                        <li>Learn pet photography skills</li>
+                        <li>Help pets get adopted faster</li>
+                        <li>Creative and rewarding activity</li>
+                        <li>Photography equipment provided</li>
+                    </ul>
+                    <button class="btn btn-outline">Join Session</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="volunteer-cta">
+            <div class="cta-content">
+                <h2>Ready to Get Involved?</h2>
+                <p>Join our amazing community of volunteers and make a difference in the lives of animals waiting for their forever homes. Whether you have 2 hours or 20 hours a week, there's a perfect volunteer opportunity for you!</p>
+                <div class="cta-buttons">
+                    <a href="register.html" class="btn">Become a Volunteer</a>
+                    <a href="#contact" class="btn btn-outline">Contact Us</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <h2>Contact Us About Activities</h2>
+            <div class="contact-info">
+                <div class="contact-method">
+                    <h3>📞 Phone</h3>
+                    <p>(555) 123-PETS</p>
+                    <p>Monday - Friday: 9AM - 6PM</p>
+                </div>
+                <div class="contact-method">
+                    <h3>✉️ Email</h3>
+                    <p>volunteers@xyzpetadoption.com</p>
+                    <p>We respond within 24 hours</p>
+                </div>
+                <div class="contact-method">
+                    <h3>📍 Visit Us</h3>
+                    <p>123 Pet Street</p>
+                    <p>Animal City, AC 12345</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 XYZ Pet Adoption. All rights reserved. | Helping pets find their forever homes.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

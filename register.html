@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - XYZ Pet Adoption</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav role="navigation" aria-label="Main navigation">
+            <div class="nav-container">
+                <div class="logo">
+                    <h1><a href="index.html">XYZ Pet Adoption</a></h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="pets.html">Pets</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="cats.html">Cats</a></li>
+                            <li><a href="dogs.html">Dogs</a></li>
+                            <li><a href="pets.html">All Pets</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="activities.html">Activities</a></li>
+                    <li class="dropdown">
+                        <a href="auth.html" class="active">Account</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="login.html">Login</a></li>
+                            <li><a href="register.html">Register</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="auth-container">
+            <div class="auth-card">
+                <div class="auth-header">
+                    <h1>Join Our Community!</h1>
+                    <p>Create an account to start your pet adoption journey</p>
+                </div>
+
+                <form class="auth-form" id="registerForm" role="form" aria-labelledby="register-heading">
+                    <h2 id="register-heading" class="visually-hidden">Registration Form</h2>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName">First Name</label>
+                            <input 
+                                type="text" 
+                                id="firstName" 
+                                name="firstName" 
+                                required 
+                                aria-describedby="firstName-error"
+                                placeholder="Enter your first name"
+                            >
+                            <div id="firstName-error" class="error-message" role="alert" aria-live="polite"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="lastName">Last Name</label>
+                            <input 
+                                type="text" 
+                                id="lastName" 
+                                name="lastName" 
+                                required 
+                                aria-describedby="lastName-error"
+                                placeholder="Enter your last name"
+                            >
+                            <div id="lastName-error" class="error-message" role="alert" aria-live="polite"></div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email-register">Email Address</label>
+                        <input 
+                            type="email" 
+                            id="email-register" 
+                            name="email" 
+                            required 
+                            aria-describedby="email-register-error"
+                            placeholder="Enter your email address"
+                        >
+                        <div id="email-register-error" class="error-message" role="alert" aria-live="polite"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input 
+                            type="tel" 
+                            id="phone" 
+                            name="phone" 
+                            aria-describedby="phone-error"
+                            placeholder="(555) 123-4567"
+                        >
+                        <div id="phone-error" class="error-message" role="alert" aria-live="polite"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password-register">Password</label>
+                        <div class="password-input-group">
+                            <input 
+                                type="password" 
+                                id="password-register" 
+                                name="password" 
+                                required 
+                                aria-describedby="password-register-error password-requirements"
+                                placeholder="Create a password"
+                            >
+                            <button 
+                                type="button" 
+                                class="password-toggle" 
+                                aria-label="Toggle password visibility"
+                                onclick="togglePasswordVisibility('password-register')"
+                            >
+                                👁️
+                            </button>
+                        </div>
+                        <div id="password-requirements" class="password-requirements">
+                            Password must be at least 8 characters with uppercase, lowercase, number, and special character
+                        </div>
+                        <div id="password-register-error" class="error-message" role="alert" aria-live="polite"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="confirmPassword">Confirm Password</label>
+                        <div class="password-input-group">
+                            <input 
+                                type="password" 
+                                id="confirmPassword" 
+                                name="confirmPassword" 
+                                required 
+                                aria-describedby="confirmPassword-error"
+                                placeholder="Confirm your password"
+                            >
+                            <button 
+                                type="button" 
+                                class="password-toggle" 
+                                aria-label="Toggle password visibility"
+                                onclick="togglePasswordVisibility('confirmPassword')"
+                            >
+                                👁️
+                            </button>
+                        </div>
+                        <div id="confirmPassword-error" class="error-message" role="alert" aria-live="polite"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="userType">I'm interested in:</label>
+                        <select id="userType" name="userType" required aria-describedby="userType-error">
+                            <option value="">Select your primary interest</option>
+                            <option value="adopting">Adopting a pet</option>
+                            <option value="volunteering">Volunteering</option>
+                            <option value="fostering">Fostering animals</option>
+                            <option value="donations">Making donations</option>
+                            <option value="events">Attending events</option>
+                        </select>
+                        <div id="userType-error" class="error-message" role="alert" aria-live="polite"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="checkbox-container">
+                            <input type="checkbox" id="terms" name="terms" required>
+                            <span class="checkmark"></span>
+                            I agree to the <a href="#terms" target="_blank">Terms of Service</a> and <a href="#privacy" target="_blank">Privacy Policy</a>
+                        </label>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="checkbox-container">
+                            <input type="checkbox" id="newsletter" name="newsletter">
+                            <span class="checkmark"></span>
+                            Subscribe to our newsletter for pet care tips and adoption updates
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary auth-submit">Create Account</button>
+
+                    <div class="auth-divider">
+                        <span>or</span>
+                    </div>
+
+                    <div class="social-login">
+                        <button type="button" class="btn btn-social google-login">
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%234285f4' d='M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z'/%3E%3Cpath fill='%2334a853' d='M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z'/%3E%3Cpath fill='%23fbbc05' d='M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z'/%3E%3Cpath fill='%23ea4335' d='M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z'/%3E%3C/svg%3E" alt="Google logo" width="20" height="20">
+                            Sign up with Google
+                        </button>
+                        <button type="button" class="btn btn-social facebook-login">
+                            <span class="facebook-icon">f</span>
+                            Sign up with Facebook
+                        </button>
+                    </div>
+                </form>
+
+                <div class="auth-footer">
+                    <p>Already have an account? <a href="login.html">Sign in here</a></p>
+                </div>
+            </div>
+
+            <aside class="auth-benefits">
+                <h3>Membership Benefits</h3>
+                <ul>
+                    <li>🏠 <strong>Find Your Perfect Match:</strong> Get personalized pet recommendations</li>
+                    <li>❤️ <strong>Save Favorites:</strong> Keep track of pets you're interested in</li>
+                    <li>📋 <strong>Quick Applications:</strong> Streamlined adoption process</li>
+                    <li>🎾 <strong>Join Activities:</strong> Register for events and volunteer opportunities</li>
+                    <li>📧 <strong>Stay Updated:</strong> Receive notifications about new pets and events</li>
+                    <li>🏆 <strong>Track Progress:</strong> Monitor your volunteer hours and impact</li>
+                </ul>
+            </aside>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 XYZ Pet Adoption. All rights reserved. | Helping pets find their forever homes.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
